@@ -3,6 +3,14 @@
     {
       "title": "Test Title",
       "text": "Test text"
+    },
+    {
+      "title": "title of note",
+      "text": "text of note"
+    },
+    {
+      "title": "To Do List",
+      "text": "1. kiss my crush\n2. love someone who deserves it\n3. make memorizes "
     }
   ]
 }
