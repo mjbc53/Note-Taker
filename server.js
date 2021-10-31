@@ -1,28 +1,18 @@
 const express = require('express')
 
 const PORT = process.env.PORT || 3001
-
 const app = express()
-
-const { notes } = require('./data/db.json')
-
-const { createNewNote, validateNote } = require('./lib/notes')
+const apiRoutes = require('./routes/apiRoutes')
+const htmlRoutes = require('./routes/htmlRoutes')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
+app.use(express.static('public'))
 
-app.get('/api/notes', (req, res) => {
- res.json(notes)
-})
+app.use('/api', apiRoutes)
+// app.use('/', htmlRoutes)
 
-app.post('/api/notes', (req, res) => {
-  if(!validateNote(req.body)){
-    res.status(400).send('The note is not entered correctly')
-  }else{
-    const note = createNewNote(req.body, notes)
-    res.json(note)
-  }
-})
+
 
 app.listen(PORT, () => {
   console.log(`API server is on http://localhost:${PORT}`)
