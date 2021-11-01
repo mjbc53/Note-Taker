@@ -3,6 +3,7 @@ const router = require('express').Router()
 const { createNewNote, validateNote }= require('../../lib/notes')
 //get dataset
 let { notes } = require('../../data/db.json')
+//import path and fs
 const fs = require('fs')
 const path = require('path')
 
