@@ -1,16 +1,14 @@
 {
   "notes": [
     {
-      "title": "Test Title",
-      "text": "Test text"
+      "title": "Hello world",
+      "text": "Hello world",
+      "id": "0"
     },
     {
-      "title": "title of note",
-      "text": "text of note"
-    },
-    {
-      "title": "To Do List",
-      "text": "1. kiss my crush\n2. love someone who deserves it\n3. make memorizes "
+      "title": "test note",
+      "text": "test note 1",
+      "id": "1"
     }
   ]
 }
